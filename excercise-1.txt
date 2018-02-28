@@ -11,13 +11,13 @@ DISPLAY "resultan gaya"
 
 STORE "tahun" with any number
 
-IF "tahun"/4 == 0 && "tahun"/100 != 0 THEN
+IF "tahun"%4 == 0 && "tahun"%100 != 0 THEN
   DISPLAY "tahun kabisat"
 ELSE
   DISPLAY "BUKAN tahun kabisat"
 ENDIF
 
-IF "tahun"/4 == 0 && "tahun"/100 == 0 && "tahun"/400 == 0 THEN
+IF "tahun"%4 == 0 && "tahun"%100 == 0 && "tahun"%400 == 0 THEN
   DISPLAY "tahun kabisat"
 ELSE
   DISPLAY "BUKAN tahun kabisat"
@@ -43,6 +43,7 @@ STORE "kuku panjang" with false
 STORE "kuku pendek" with true 
 
 WHILE "jumlah murid" <= 40
+  ADD "jumlah murid" + 1
   DO "periksa kuku murid"
   IF "periksa kuku murid" == false THEN
     DISPLAY "murid dihukum"
